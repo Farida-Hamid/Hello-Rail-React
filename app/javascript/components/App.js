@@ -7,12 +7,12 @@ import store from '../redux/configureStore';
 function App() {
   return (
     <BrowserRouter>
-    <Provider store={store}>
+      <Provider store={store}>
         <Routes>
-           <Route exact path='/' element={<Greeting />} />
-         </Routes>
-         </Provider>
-       </BrowserRouter>
+          <Route path='/' element={<Greeting />} />
+        </Routes>
+      </Provider>
+    </BrowserRouter>
   );
 }
 
