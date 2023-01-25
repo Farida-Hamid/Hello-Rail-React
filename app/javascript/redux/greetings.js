@@ -14,7 +14,7 @@ const greetingsReducer = (state = [], action) => {
   }
 };
 
-export const recieveGreetings = () => (dispatch) => {
+export const recieveGreetings = () => async(dispatch) => {
   axios.get(API).then((response) => {
     console.log('response', response.data);
     dispatch(read(response.data));
