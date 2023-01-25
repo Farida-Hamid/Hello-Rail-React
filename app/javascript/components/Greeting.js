@@ -5,7 +5,6 @@ import { recieveGreetings } from '../redux/greetings';
 const Greeting = () => {
   const message = useSelector((state) => state.greeting);
   const dispatch = useDispatch();
-  console.log("state at greeting component", message);
 
   useEffect(() => {
       dispatch(recieveGreetings());
@@ -13,7 +12,7 @@ const Greeting = () => {
 
   return (
     <div>
-      <h2>.....{message.messages}</h2>
+      <h2>{message.messages}</h2>
     </div>
   )
 };
