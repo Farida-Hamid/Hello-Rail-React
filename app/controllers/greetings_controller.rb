@@ -1,5 +1,5 @@
 class GreetingsController < ApplicationController
   def index
-    @greeting = Greeting.all.shuffle.first
+    @greeting = Greeting.all.sample
   end
 end

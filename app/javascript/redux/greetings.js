@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const READ = 'READ';
-const read = (message) => ({ type: READ, payload: message});
+const read = (message) => ({ type: READ, payload: message });
 
 const API = 'api/greetings';
 
@@ -14,7 +14,7 @@ const greetingsReducer = (state = [], action) => {
   }
 };
 
-export const recieveGreetings = () => async(dispatch) => {
+export const recieveGreetings = () => async (dispatch) => {
   axios.get(API).then((response) => {
     dispatch(read(response.data));
   });

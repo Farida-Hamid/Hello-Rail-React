@@ -1,6 +1,6 @@
 class Api::GreetingsController < ApplicationController
   def index
-    messages = Greeting.all.shuffle.first
+    messages = Greeting.all.sample
     render json: messages
   end
 end

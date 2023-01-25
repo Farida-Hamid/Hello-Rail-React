@@ -7,14 +7,14 @@ const Greeting = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-      dispatch(recieveGreetings());
+    dispatch(recieveGreetings());
   }, []);
 
   return (
     <div>
       <h2>{message.messages}</h2>
     </div>
-  )
+  );
 };
 
 export default Greeting;
