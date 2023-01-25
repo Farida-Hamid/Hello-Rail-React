@@ -1,14 +1,13 @@
 import axios from 'axios';
 
-const GET_DATA = 'GET_DATA';
-const API = 'http://127.0.0.1:3000/api/greetings';
+const READ = 'READ';
+const read = (message) => ({ type: READ, payload: message});
 
+const API = 'api/greetings';
 
-const initialState = [];
-
-const greetingsReducer = (state = initialState, action) => {
+const greetingsReducer = (state = [], action) => {
   switch (action.type) {
-    case GET_DATA:
+    case READ:
       return action.payload;
     default:
       return state;
@@ -16,10 +15,9 @@ const greetingsReducer = (state = initialState, action) => {
 };
 
 export const recieveGreetings = () => (dispatch) => {
-  axios.get(API).then((resonse) => {
-    const {data} = resonse.data;
-    console.log('response', resonse.data);
-    dispatch({ type: GET_DATA, payload: data })
+  axios.get(API).then((response) => {
+    console.log('response', response.data);
+    dispatch(read(response.data));
   });
 };
 

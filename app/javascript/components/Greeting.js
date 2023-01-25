@@ -3,20 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { recieveGreetings } from '../redux/greetings';
 
 const Greeting = () => {
-  const state = useSelector((state) => state.greeting);
-  console.log("state.greeting",state);
+  const message = useSelector((state) => state.greeting);
   const dispatch = useDispatch();
+  console.log("state at greeting component", message);
 
   useEffect(() => {
       dispatch(recieveGreetings());
   }, []);
 
   return (
-      <div className="container">
-          <div>
-              <h2>👋{state}</h2>
-          </div>
-      </div>
+    <div>
+      <h2>👋{message}</h2>
+    </div>
   )
 };
 

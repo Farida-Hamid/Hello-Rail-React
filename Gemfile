@@ -8,7 +8,12 @@ gem "rails", "~> 7.0.4"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
-
+gem 'pg', '~> 1.1'
+	
+gem 'importmap-rails', '~> 1.1'
+gem 'react_on_rails'
+gem 'active_model_serializers', '~> 0.10.13'
+gem 'foreman'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
