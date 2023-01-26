@@ -12,7 +12,6 @@ gem 'sprockets-rails'
 
 gem 'active_model_serializers', '~> 0.10.13'
 gem 'foreman'
-gem 'importmap-rails', '~> 1.1'
 gem 'react_on_rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
